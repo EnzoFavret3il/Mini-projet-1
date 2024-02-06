@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 
 import fr.ecole3il.rodez2023.perlin.Utils;
 import fr.ecole3il.rodez2023.perlin.math.Bruit2D;
-//test
+
 /**
  * 
  * @author proussille

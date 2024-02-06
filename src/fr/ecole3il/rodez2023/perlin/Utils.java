@@ -53,6 +53,17 @@ public class Utils {
     	// Bon, je le ferai plus tard, je vais réviser l'espagnol
     	// Je mets ça, ça marchera bien en attendant
     	// tant pis
+    	
+    	//Bon du coup  je l'ai fait car why not
+    	
+    	Random random = new Random(seed);
+    	for(int i=0;i<tab.length; i++) {
+    		int randomval = random.nextInt(i);
+    		int randomelement=tab[randomval];
+    		tab[randomval]=tab[i];
+    		tab[i]=randomelement;
+    	}
+    	
         return tab;
     }
 
@@ -66,7 +77,21 @@ public class Utils {
      */
     public static double min(int width, int height) {
     	// pas le temps, j'ai mes exos de chimie à finir
-    	return 1;
+    	//la chimie c'est pas bo
+    	if(width==height) {
+    		return height;
+    	}
+    	else if(height<width) {
+    		return height;
+    	}
+    	else if(width<height) {
+    	
+    	return width;
+    	}
+    	else {
+    	//j'aime pas les try and catch et les tests unitaire du coup ca retourne quand même quelque chose si ça n'entre pas dans les conditions précédentes
+    		return 1;  
+    	}
     }
 
     /**
@@ -91,4 +116,3 @@ public class Utils {
         return contenu.toString();
     }    
 }
-

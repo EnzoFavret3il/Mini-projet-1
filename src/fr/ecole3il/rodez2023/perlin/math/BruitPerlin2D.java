@@ -38,8 +38,9 @@ public class BruitPerlin2D extends Bruit2D {
 		double unit = 1.0f / (double) Math.sqrt(2);
 		double tmp, s, t, u, v, Cx, Cy, Li1, Li2;
 		// Adapter pour la résolution
-		x /= resolution;
-		y /= resolution;
+		/**Resolution de l'erreur avec l'utuilisation des getters*/
+		x /= getResolution();
+		y /= getResolution();
 
 		// Obtenir les coordonnées de la grille associées à (x, y)
 		x0 = (int) (x);
@@ -81,7 +82,7 @@ public class BruitPerlin2D extends Bruit2D {
 
 		tmp = y - y0;
 		Cy = 3 * tmp * tmp - 2 * tmp * tmp * tmp;
-
-		return Li2 + Cy * (Li2 - Li1);
+		//Modification here Li1 au lieu de Li2
+		return Li1 + Cy * (Li2 - Li1);
 	}
 }

@@ -58,7 +58,7 @@ public class Utils {
     	
     	Random random = new Random(seed);
     	for(int i=0;i<tab.length; i++) {
-    		int randomval = random.nextInt(i);
+    		int randomval = random.nextInt(tab.length);
     		int randomelement=tab[randomval];
     		tab[randomval]=tab[i];
     		tab[i]=randomelement;

@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
+import fr.ecole3il.rodez2023.perlin.gui.ImageBruit;
 import fr.ecole3il.rodez2023.perlin.math.BruitPerlin2D;
 
 /**

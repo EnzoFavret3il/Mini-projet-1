@@ -27,7 +27,8 @@ public enum TypeTerrain {
         this.image = fr.ecole3il.rodez2023.perlin.Utils.chargerTuile("data/" + nomImage);
     }
     /**@Getter getImage --> permet de récupérer l'image
-     * @Getter getNom --> permet de récupérer le nom du terrain*/
+     * @Getter getNom --> permet de récupérer le nom du terrain
+     * @Override toString--> réécriture de la méthode toString pour l'adapter à la demande*/
     public BufferedImage getImage() {
         return image;
     }

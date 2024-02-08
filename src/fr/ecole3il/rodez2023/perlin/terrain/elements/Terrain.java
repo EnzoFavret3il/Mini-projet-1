@@ -1,18 +1,20 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.TypeTerrain;
+import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
 
-
+/**@param hydrometrie,temperature,altitude --> données définissant un terrain de type double pour plus de précision*/
 public class Terrain {
     private double hydrometrie;
     private double temperature;
     private double altitude;
-
+/**@Constructeur --> constructeur pour le terrain
+ * Gestion des valeurs par setters pour gérer erreurs mauvaise valeur*/
     public Terrain(double hydrometrie, double temperature, double altitude) {
         setHydrometrie(hydrometrie);
         setTemperature(temperature);
         setAltitude(altitude);
     }
-
+    /**@getters --> getter pour les valeurs du terrain*/
     public double getHydrometrie() {
         return hydrometrie;
     }
@@ -24,7 +26,7 @@ public class Terrain {
     public double getAltitude() {
         return altitude;
     }
-
+    /**@setters --> setters pour les données du terrain */
     public void setHydrometrie(double hydrometrie) {
         if (hydrometrie < 0 || hydrometrie > 1) {
             throw new MauvaiseValeurException("L'hydrométrie doit être comprise entre 0 et 1.");
@@ -45,8 +47,9 @@ public class Terrain {
         }
         this.altitude = altitude;
     }
-
+   /** méthode getTypeTerrain, pas trop compris mais why not*/
     public TypeTerrain getTypeTerrain(DetermineurTerrain dt) {
-        return dt.determineTypeTerrain(this);
+        return dt.determinerTerrain(altitude, hydrometrie, temperature);
     }
+
 }

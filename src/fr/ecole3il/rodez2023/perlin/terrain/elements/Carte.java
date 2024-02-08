@@ -1,3 +1,5 @@
+package fr.ecole3il.rodez2023.perlin.terrain.elements;
+
 import java.util.Scanner;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
 import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurCarte;
@@ -8,4 +10,12 @@ public class Carte {
     private int largeur;
     private int hauteur;
     private Terrain[][] terrains;
+    
+    /**@Constructor --> Constructeur d'une carte/utilisation de la méthode genererCarte*/
+    public Carte(String nom, int largeur, int hauteur, GenerateurCarte generateurCarte) {
+        this.nom = nom;
+        this.largeur = largeur;
+        this.hauteur = hauteur;
+        this.terrains = generateurCarte.genererCarte(largeur, hauteur);
+    }
 }

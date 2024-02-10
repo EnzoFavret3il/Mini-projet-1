@@ -20,22 +20,25 @@ public class Carte {
 
     }
     /**@Constructor --> second constructeur de carte
-     * @param --> valeurs d'un terrain et valeurs de la carte*/
+     * @param --> valeurs d'un terrain et valeurs de la carte
+     *'/!\ complicado à faire tous ça...*/
     public Carte(String donneesCarte) {
         Scanner scanner = new Scanner(donneesCarte);
+        //première ligne
         this.nom = scanner.nextLine();
+        //seconde ligne
         this.largeur = scanner.nextInt();
         this.hauteur = scanner.nextInt();
         scanner.nextLine(); 
 
-
+        //troisième ligne
         for (int i = 0; i < hauteur; i++) {
             for (int j = 0; j < largeur; j++) {
                 double altitude = scanner.nextDouble();
                 double hydrometrie = scanner.nextDouble();
                 double temperature = scanner.nextDouble();
                 this.terrains[j][i] = new Terrain(altitude, hydrometrie, temperature);
-                scanner.nextLine(); // Passer à la ligne suivante
+                scanner.nextLine(); // Passer à la ligne suivante pour finir la lectoura
             }
         }
 

@@ -5,7 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import fr.ecole3il.rodez2023.perlin.Utils;
+import fr.ecole3il.rodez2023.perlin.terrain.elements.Carte;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
+import fr.ecole3il.rodez2023.perlin.terrain.elements.TerrainInexistant;
 
 /**
  * La classe ManipulateurCarte fournit des méthodes pour charger et enregistrer des cartes.
@@ -28,8 +30,9 @@ public class ManipulateurCarte {
      * Enregistre une carte dans un fichier spécifié.
      * @param carte La carte à enregistrer.
      * @param cheminFichier Le chemin vers le fichier où la carte sera enregistrée.
+     * @throws TerrainInexistant 
      */
-    public static void enregistrerCarte(Carte carte, String cheminFichier) {
+    public static void enregistrerCarte(Carte carte, String cheminFichier) throws TerrainInexistant {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(cheminFichier))) {
             // Écriture des métadonnées de la carte
             writer.write(carte.getNom() + "\n");

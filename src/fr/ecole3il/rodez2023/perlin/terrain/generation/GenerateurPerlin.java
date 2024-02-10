@@ -1,5 +1,6 @@
 package fr.ecole3il.rodez2023.perlin.terrain.generation;
 
+import fr.ecole3il.rodez2023.perlin.math.BruitPerlin2D;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
 
 public class GenerateurPerlin extends GenerateurCarte{
@@ -11,8 +12,11 @@ public class GenerateurPerlin extends GenerateurCarte{
 
 	@Override
 	protected Terrain genererTerrain(int i, int j, int largeur, int hauteur) {
-		// TODO Auto-generated method stub
-		return null;
+		/**Generation des valeurs de types BruitPerlin2D*/
+		BruitPerlin2D altitudePerlin = new BruitPerlin2D(getGraine(), 1); 
+        BruitPerlin2D hydrometriePerlin = new BruitPerlin2D(getGraine(), 1); 
+        BruitPerlin2D temperaturePerlin = new BruitPerlin2D(getGraine() * 2, 1); 
+        
 	}
 
 }

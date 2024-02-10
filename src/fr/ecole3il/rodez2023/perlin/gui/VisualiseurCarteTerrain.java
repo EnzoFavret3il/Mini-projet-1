@@ -28,6 +28,7 @@ import fr.ecole3il.rodez2023.perlin.terrain.concrets.VisualiseurTerrainEnonce;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.TypeTerrain;
 import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurAleatoire;
 import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurPerlin;
+
 /**
  * 
  * @author proussille
@@ -48,9 +49,8 @@ public class VisualiseurCarteTerrain extends JFrame {
      * @param g L'objet Graphics pour dessiner.
      * @param panelWidth La largeur du panneau.
      * @param panelHeight La hauteur du panneau.
-     * @throws TerrainInexistant 
      */
-    public void drawCarte(Carte carte, Graphics g, int panelWidth, int panelHeight) throws TerrainInexistant {
+    public void drawCarte(Carte carte, Graphics g, int panelWidth, int panelHeight) {
         vte = new VisualiseurTerrainEnonce(carte);
         int largeur = carte.getLargeur();
         int hauteur = carte.getHauteur();
@@ -59,11 +59,18 @@ public class VisualiseurCarteTerrain extends JFrame {
 
         for (int y = 0; y < hauteur; y++) {
             for (int x = 0; x < largeur; x++) {
-                TypeTerrain type = vte.getTypeTerrain(x, y);
-                BufferedImage image = type.getImage();
-                g.drawImage(image, x * tuileWidth, y * tuileHeight, tuileWidth, tuileHeight, null);
+                try {
+                    TypeTerrain type = vte.getTypeTerrain(x, y);
+                    BufferedImage image = type.getImage();
+                    g.drawImage(image, x * tuileWidth, y * tuileHeight, tuileWidth, tuileHeight, null);
+                } catch (TerrainInexistant e) {
+                    // Gérer l'exception ici, par exemple afficher un message d'erreur
+                    System.out.println("Terrain inexistant : " + e.getMessage());
+                    // Vous pouvez également décider de passer à la prochaine itération ou faire d'autres actions nécessaires
+                }
             }
         }
+
     }
 	public VisualiseurCarteTerrain() {
 		VisualiseurCarteTerrain monObjet = this;
@@ -77,12 +84,7 @@ public class VisualiseurCarteTerrain extends JFrame {
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
 				if (carte != null) {
-					try {
-						monObjet.drawCarte(carte, g, getWidth(), getHeight());
-					} catch (TerrainInexistant e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					monObjet.drawCarte(carte, g, getWidth(), getHeight());
 				}
 			}
 		};
@@ -98,19 +100,17 @@ public class VisualiseurCarteTerrain extends JFrame {
 		        int y = e.getY() / tuileHeight;
 
 		        System.out.println("Coordonnées de la souris - X: " + x + ", Y: " + y);
-		        TypeTerrain type=null;
+
 		        if (x >= 0 && x < carte.getLargeur() && y >= 0 && y < carte.getHauteur()) {
-		            
-					try {
-						type = vte.getTypeTerrain(x, y);
-					} catch (TerrainInexistant e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-		            terrainLabel.setText("Terrain: " + type.toString());
+		            try {
+		                TypeTerrain type = vte.getTypeTerrain(x, y);
+		                terrainLabel.setText("Terrain: " + type.toString());
+		            } catch (TerrainInexistant e1) {
+		                // Gérer l'exception ici, par exemple afficher un message d'erreur
+		                System.out.println("Terrain inexistant : " + e1.getMessage());
+		            }
 		        }
 		    }
-
 		    @Override
 		    public void mouseExited(MouseEvent e) {
 		        terrainLabel.setText("Terrain: "); // Efface le texte quand la souris quitte la zone de la carte
@@ -125,21 +125,20 @@ public class VisualiseurCarteTerrain extends JFrame {
 
 		        int x = e.getX() / tuileWidth;
 		        int y = e.getY() / tuileHeight;
-		        // Crée le contenu à afficher dans la fenêtre modale
-		            String contenu="";
+
 		        if (x >= 0 && x < carte.getLargeur() && y >= 0 && y < carte.getHauteur()) {
+		            try {
+		                // Crée le contenu à afficher dans la fenêtre modale
+		                String contenu = "Altitude: " + vte.getAltitudeAffichee(x, y) + "\nHydrométrie: " + vte.getHydrometrieAffichee(x, y)+ "\nTempérature: " + vte.getTemperatureAffichee(x, y);
 
-		            
-					try {
-						contenu = "Altitude: " + vte.getAltitudeAffichee(x, y) + "\nHydrométrie: " + vte.getHydrometrieAffichee(x, y)+ "\nTempérature: " + vte.getTemperatureAffichee(x, y);
-					} catch (TerrainInexistant e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-
-		            // Affiche une fenêtre modale avec les informations de la tuile
-		            JOptionPane.showMessageDialog(cartePanel, contenu, "Informations de la tuile", JOptionPane.INFORMATION_MESSAGE);
+		                // Affiche une fenêtre modale avec les informations de la tuile
+		                JOptionPane.showMessageDialog(cartePanel, contenu, "Informations de la tuile", JOptionPane.INFORMATION_MESSAGE);
+		            } catch (TerrainInexistant e1) {
+		                // Gérer l'exception ici, par exemple afficher un message d'erreur
+		                System.out.println("Terrain inexistant : " + e1.getMessage());
+		            }
 		        }
+
 		    }
 		});
 		add(cartePanel, BorderLayout.CENTER);

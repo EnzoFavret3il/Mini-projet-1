@@ -17,5 +17,48 @@ public class Carte {
         this.largeur = largeur;
         this.hauteur = hauteur;
         this.terrains = generateurCarte.genererCarte(largeur, hauteur);
+
+    }
+    /**@Constructor --> second constructeur de carte
+     * @param --> valeurs d'un terrain et valeurs de la carte*/
+    public Carte(String donneesCarte) {
+        Scanner scanner = new Scanner(donneesCarte);
+        this.nom = scanner.nextLine();
+        this.largeur = scanner.nextInt();
+        this.hauteur = scanner.nextInt();
+        scanner.nextLine(); 
+
+
+        for (int i = 0; i < hauteur; i++) {
+            for (int j = 0; j < largeur; j++) {
+                double altitude = scanner.nextDouble();
+                double hydrometrie = scanner.nextDouble();
+                double temperature = scanner.nextDouble();
+                this.terrains[j][i] = new Terrain(altitude, hydrometrie, temperature);
+                scanner.nextLine(); // Passer à la ligne suivante
+            }
+        }
+
+        scanner.close();
+    }
+    
+    /**@getter --> getter demandés*/
+    public String getNom() {
+        return nom;
+    }
+
+    public int getLargeur() {
+        return largeur;
+    }
+
+    public int getHauteur() {
+        return hauteur;
+    }
+
+    public Terrain getTerrain(int x, int y) throws TerrainInexistant {
+        if (x < 0 || x >= largeur || y < 0 || y >= hauteur) {
+            throw new TerrainInexistant("Terrain inexistant à cet endroit (" + x + ", " + y + ")");
+        }
+        return terrains[x][y];
     }
 }

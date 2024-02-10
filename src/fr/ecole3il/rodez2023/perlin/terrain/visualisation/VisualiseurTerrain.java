@@ -56,10 +56,10 @@ private Carte carte;
     }
     
     /**@getTypeTerrain --> getter qui renvoie une chaine de caractère determinant le terrain ou une erreur si terrain inexistant*/
-    public String getTypeTerrain(int x, int y) throws TerrainInexistant {
+    public TypeTerrain getTypeTerrain(int x, int y) throws TerrainInexistant {
         Terrain terrain = carte.getTerrain(x, y);
         TypeTerrain typeTerrain = determineurTerrain.determinerTerrain(terrain.getAltitude(), terrain.getHydrometrie(), terrain.getTemperature());
-        return typeTerrain.toString();
+        return typeTerrain;
     }
     
 }

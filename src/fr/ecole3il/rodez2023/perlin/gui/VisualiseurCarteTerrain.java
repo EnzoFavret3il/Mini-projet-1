@@ -70,7 +70,6 @@ public class VisualiseurCarteTerrain extends JFrame {
                 }
             }
         }
-
     }
 	public VisualiseurCarteTerrain() {
 		VisualiseurCarteTerrain monObjet = this;
@@ -103,14 +102,19 @@ public class VisualiseurCarteTerrain extends JFrame {
 
 		        if (x >= 0 && x < carte.getLargeur() && y >= 0 && y < carte.getHauteur()) {
 		            try {
-		                TypeTerrain type = vte.getTypeTerrain(x, y);
-		                terrainLabel.setText("Terrain: " + type.toString());
+		                // Crée le contenu à afficher dans la fenêtre modale
+		                String contenu = "Altitude: " + vte.getAltitudeAffichee(x, y) + "\nHydrométrie: " + vte.getHydrometrieAffichee(x, y)+ "\nTempérature: " + vte.getTemperatureAffichee(x, y);
+
+		                // Affiche une fenêtre modale avec les informations de la tuile
+		                JOptionPane.showMessageDialog(cartePanel, contenu, "Informations de la tuile", JOptionPane.INFORMATION_MESSAGE);
 		            } catch (TerrainInexistant e1) {
 		                // Gérer l'exception ici, par exemple afficher un message d'erreur
 		                System.out.println("Terrain inexistant : " + e1.getMessage());
 		            }
 		        }
+
 		    }
+
 		    @Override
 		    public void mouseExited(MouseEvent e) {
 		        terrainLabel.setText("Terrain: "); // Efface le texte quand la souris quitte la zone de la carte

@@ -31,8 +31,7 @@ public class Carte {
         this.hauteur = scanner.nextInt();
         scanner.nextLine(); 
 
-        
-        this.terrains = new Terrain[largeur][hauteur];
+        this.terrains = new Terrain[largeur][hauteur]; 
 
         //troisième ligne
         for (int i = 0; i < hauteur; i++) {
@@ -41,12 +40,13 @@ public class Carte {
                 double hydrometrie = scanner.nextDouble();
                 double temperature = scanner.nextDouble();
                 this.terrains[j][i] = new Terrain(altitude, hydrometrie, temperature);
-                scanner.nextLine(); // Passer à la ligne suivante pour finir la lectoura
+                scanner.nextLine(); // Passer à la ligne suivante pour finir la lecture
             }
         }
 
         scanner.close();
     }
+
     
     /**@getter --> getter demandés*/
     public String getNom() {

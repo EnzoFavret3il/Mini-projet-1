@@ -25,7 +25,7 @@ public abstract class GenerateurCarte {
      *
      * @param largeur La largeur de la carte.
      * @param hauteur La hauteur de la carte.
-     * @return Un tableau bidimensionnel de terrains représentant la carte générée.
+     * @return Un tableau bidimensionnel de terrains de la carte générée.
      */
     public Terrain[][] genererCarte(int largeur, int hauteur) {
         Terrain[][] terrains = new Terrain[largeur][hauteur];

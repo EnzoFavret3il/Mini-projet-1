@@ -7,8 +7,8 @@ import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurCarte;
 public class Carte {
 	/**@param nom, largeur, hauteur, terrains --> valeur définissant/utile à la cr&ation de la carte*/
     private String nom;
-    private int largeur=1;
-    private int hauteur=1;
+    private int largeur;
+    private int hauteur;
     private Terrain[][] terrains;
     
     /**@Constructor --> Constructeur d'une carte/utilisation de la méthode genererCarte*/

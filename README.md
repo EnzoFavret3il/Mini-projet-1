@@ -22,7 +22,8 @@ Les attributs et les méthodes ne seront pas différentes de la classe terrain. 
 
 **Terrain**
 
-On va utiliser un type double pour ces données car cela permet d'avoir des valeurs plus précises et plus variées. On souhaites sortir ce bout d'algorithme de la classe afin d'améliorer la conception du programme. Cette amélioration rendra le code plus flexible aux modifications et à l'ajout de nouveau code. 
+On va utiliser un type double pour ces données car cela permet d'avoir des valeurs plus précises et plus variées. 
+On souhaites sortir ce bout d'algorithme de la classe afin d'améliorer la conception du programme. Cette amélioration rendra le code plus flexible aux modifications et à l'ajout de nouveau code. 
 
 ## Retour sur le projet
 

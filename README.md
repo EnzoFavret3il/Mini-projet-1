@@ -26,9 +26,9 @@ On va utiliser un type double pour ces données car cela permet d'avoir des vale
 
 ## Retour sur le projet
 
-Ce projet était très intéressant mais à la fois assez difficile. Certaines parties dans le sujet demandaient certaines connaissances que je n'avais pas (patron Visiteur, tableau à deux dimensions...) ce qui m'a bien ralenti sur l'avancé du sujet. Concernant l'erreur affichée sur ce que j'ai réalisé du projet, j'ai utilisé ChatGPT (je ne vais pas mentir ça se voit) pour m'aider à corriger l'erreur mais en vain. Je ne sais pas comment on peut avoir un this.this.carte=null mais je l'ai eu... C'est dommage, j'avais hâte de voir le résultat de toutes ces heures de travail.
+Ce projet était très intéressant mais à la fois assez difficile. Certaines parties dans le sujet demandaient certaines connaissances que je n'avais pas (patron Visiteur, tableau à deux dimensions...) ce qui m'a bien ralenti sur l'avancé du sujet. Concernant l'erreur affichée sur "ce que j'ai réalisé du projet", j'ai utilisé ChatGPT (je ne vais pas mentir ça se voit) pour m'aider à corriger l'erreur mais en vain. Je ne sais pas comment on peut avoir un "this.this$0.carte is null" mais je l'ai eu... C'est dommage, j'avais hâte de voir le résultat de toutes ces heures de travail.
 
 ## Commentaires
 
-J'ai du recommencer le projet suite à quelque chose que je ne comprend toujours pas. Tout le code c'est mit à envoyer des exceptions Pointer qui ont fait que rien ne fonctionnait plus, j'ai donc trouver préférable de recommencer le projet.
+J'ai du recommencer le projet suite à quelque chose que je ne comprend toujours pas. Tout le code s'est mit à envoyer des exceptions Pointer qui ont fait que rien ne fonctionnait plus, j'ai donc trouver préférable de recommencer le projet.
 Cela explique aussi les commentaires de push assez particuliers (cela m'avait fatigué sur le coup). Pardonnez moi pour cela.

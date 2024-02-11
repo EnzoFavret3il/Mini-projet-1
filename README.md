@@ -9,7 +9,7 @@ Concernant la génération de terrain, tout a été réalisé. J'ai dû modifier
 Le projet compile sans souci, le seul problème réside dans la génération de la carte avec le terrain lorsque l'on bouge la souris, où l'exception précédente apparaît.
 
 ## Réponse aux Questions
-
+ 
 ### Faites du bruit :
 
 L'attribut "graine" est déclaré comme final pour plusieurs raisons. La première est de permettre de garantir l'intégrité des données tout au long du traitement et de produire un rendu conforme à la demande. La deuxième est d'améliorer la compréhension du code. Le mot "final" permet de comprendre que c'est l'état final de la variable.

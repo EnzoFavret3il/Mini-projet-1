@@ -61,5 +61,11 @@ private Carte carte;
         TypeTerrain typeTerrain = determineurTerrain.determinerTerrain(terrain.getAltitude(), terrain.getHydrometrie(), terrain.getTemperature());
         return typeTerrain;
     }
+	public DetermineurTerrain getDetermineurTerrain() {
+		return determineurTerrain;
+	}
+	public Carte getCarte() {
+		return carte;
+	}
     
 }

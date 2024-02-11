@@ -64,9 +64,9 @@ public class VisualiseurCarteTerrain extends JFrame {
                     BufferedImage image = type.getImage();
                     g.drawImage(image, x * tuileWidth, y * tuileHeight, tuileWidth, tuileHeight, null);
                 } catch (TerrainInexistant e) {
-                    // Gérer l'exception ici, par exemple afficher un message d'erreur
+                    
                     System.out.println("Terrain inexistant : " + e.getMessage());
-                    // Vous pouvez également décider de passer à la prochaine itération ou faire d'autres actions nécessaires
+                    
                 }
             }
         }

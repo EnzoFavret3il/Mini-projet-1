@@ -1,3 +1,4 @@
+//Réimport de l'ancien projet
 package fr.ecole3il.rodez2023.perlin.terrain.generation;
 
 import fr.ecole3il.rodez2023.perlin.math.BruitPerlin2D;

@@ -9,6 +9,7 @@ import java.util.Random;
 public class BruitAleatoire extends Bruit2D {
 
 	/**Constructeur du BruitAleatoire*/
+	//Prise en compte de la graine + Resoulution dans la génération
     public BruitAleatoire(long graine, double resolution) {
     	super(graine,resolution);
     	

@@ -2,7 +2,7 @@
 package fr.ecole3il.rodez2023.perlin.math;
 
 //Les classes sont crées et belles mais pas fonctionnelles
-//J'ai aqua poney du coup...
+//Ce code n'est pas terminé, manque les logiques des méthodes 
 
 public class SuperBruitPerlin2D extends BruitPerlin2D {
 

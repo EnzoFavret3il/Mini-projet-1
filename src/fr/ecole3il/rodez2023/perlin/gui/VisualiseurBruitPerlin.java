@@ -1,5 +1,5 @@
 package fr.ecole3il.rodez2023.perlin.gui;
-
+ 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;

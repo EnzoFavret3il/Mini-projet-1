@@ -2,11 +2,12 @@
 
 J'ai pû répondre à toute les questions non bonus du sujet avec plus ou moins de difficulté.
 
-La partie Bruit de Perlin fonctionne bien à part lorsque l'on rappuie à plusieurs reprises sur générer avec une même graine, il arrive qu'il y ait une erreur OutofBoundException mais je n'ai pas sû résoudre ce problème.
+La partie Bruit de Perlin (image rouge à forme aléatoire à générer) fonctionne bien à part lorsque l'on rappuie à plusieurs reprises sur générer avec une même graine, il arrive qu'il y ait une erreur OutofBoundException mais je n'ai pas sû résoudre ce problème.
 
-Concernant la partie de génération de terrain, tout a été réalisé, j'ai dû modifier certaines classes en ajoutant des throws exception ou try and catch à cause de ma classe TerrainInnexistant (je ne comprend pas pourquoi mais dans VisualiseurCarteTerrain j'avais certaines partie de code en erreur sans cela). Cette partie ne fonctionne pas à cause du fait que l'objet carte ne s'initialise pas (Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "fr.ecole3il.rodez2023.perlin.terrain.elements.Carte.getLargeur()" because "this.this$0.carte" is null) et je ne sais pas d'où cela vient. 
+Concernant la partie de génération de terrain, tout a été réalisé, j'ai dû modifier certaines classes (VisualiseurTerrain et autre) en ajoutant des throws exception ou try and catch à cause de ma classe TerrainInnexistant (je ne comprend pas pourquoi mais dans VisualiseurCarteTerrain j'avais certaines partie de code en erreur sans cela). La génération de carte avec terrain de manière Aléatoire fonctionne mais celle avec le bruitdeperlin ne fonctionne pas.. 
+J'ai dû mettre en commentaire une partie du code dans VisualiseurCarteTerrain qui affichait sans cesse les valeurs du terrain de la souris. Par ailleurs, le clique sur les tuils fonctionnes mais a un problème de résolution qui fait que certain biomes n'ont pas les bonnes valeurs. Je n'ai pas sû le résoudre
 
-Le projet compile sans soucis, le seul problème réside dans la génération de carte avec terrain lorsque l'on bouge la souris où l'exception précédente apparaît. 
+Le projet compile sans soucis. 
 
 ## Réponse aux Questions
 
@@ -27,7 +28,7 @@ On souhaites sortir ce bout d'algorithme de la classe afin d'améliorer la conce
 
 ## Retour sur le projet
 
-Ce projet était très intéressant mais à la fois assez difficile. Certaines parties dans le sujet demandaient certaines connaissances que je n'avais pas (patron Visiteur, tableau à deux dimensions...) ce qui m'a bien ralenti sur l'avancé du sujet. Concernant l'erreur affichée sur "ce que j'ai réalisé du projet", j'ai utilisé ChatGPT (je ne vais pas mentir ça se voit) pour m'aider à corriger l'erreur mais en vain. Je ne sais pas comment on peut avoir un "this.this$0.carte is null" mais je l'ai eu... C'est dommage, j'avais hâte de voir le résultat de toutes ces heures de travail.
+Ce projet était très intéressant mais à la fois assez difficile. Certaines parties dans le sujet demandaient certaines connaissances que je n'avais pas (patron Visiteur, tableau à deux dimensions...) ce qui m'a bien ralenti sur l'avancé du sujet. ChatGpt a été utilisé pour corriger des erreurs (je ne vais pas le cacher, cela se voit).
 
 ## Commentaires
 

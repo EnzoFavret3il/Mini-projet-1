@@ -10,7 +10,7 @@ public class GenerateurAleatoire extends GenerateurCarte{
 	private Random random;
 	public GenerateurAleatoire(long graine) {
 		super(graine);
-		this.random = new Random(graine);
+		this.random = new Random();
 		// TODO Auto-generated constructor stub
 	}
 	/**Constructeur pour un generer un terrain de maniere aleatoire*/
@@ -18,9 +18,9 @@ public class GenerateurAleatoire extends GenerateurCarte{
 	protected Terrain genererTerrain(int i, int j, int largeur, int hauteur) {
 		/**@info la pif-au-métrie est dans la place*/
 		Random pifomètre = new Random();
-		double altitude= pifomètre.nextDouble(0,1);//j'aurais bien aimé mettre 0 et 254 pour la ref
-		double hydrometrie=pifomètre.nextDouble(-1,1);
-		double temperature=pifomètre.nextDouble(0,1);
+		double altitude= pifomètre.nextDouble();
+		double hydrometrie=pifomètre.nextDouble();
+		double temperature=pifomètre.nextDouble();
 		try {
             return new Terrain(altitude, hydrometrie, temperature);
         } catch (MauvaiseValeurException e) {

@@ -61,6 +61,7 @@ public class Carte {
         return hauteur;
     }
 
+    	/**Methode pour les valeurs du terrain sinon renvoie exception si aucun terrain*/
     public Terrain getTerrain(int x, int y) throws TerrainInexistant {
         if (x < 0 || x >= largeur || y < 0 || y >= hauteur) {
             throw new TerrainInexistant("Terrain inexistant à cet endroit (" + x + ", " + y + ")");

@@ -13,7 +13,7 @@ public enum HydrometrieAffichee {
     HydrometrieAffichee(double valeurLimite) {
         this.valeurLimite = valeurLimite;
     }
-
+    /**Renvoie la valeur limite pour gérer les biomes*/
     public double getValeurLimite() {
         return valeurLimite;
     }

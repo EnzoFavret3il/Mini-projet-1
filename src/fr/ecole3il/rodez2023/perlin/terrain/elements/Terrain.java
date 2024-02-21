@@ -47,7 +47,7 @@ public class Terrain {
         }
         this.altitude = altitude;
     }
-   /** méthode getTypeTerrain, pas trop compris mais why not*/
+   /** @getter renvoie les valeurs du terrain*/
     public TypeTerrain getTypeTerrain(DetermineurTerrain dt) {
         return dt.determinerTerrain(altitude, hydrometrie, temperature);
     }

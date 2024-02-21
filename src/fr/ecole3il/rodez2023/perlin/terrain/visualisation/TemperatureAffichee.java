@@ -12,6 +12,7 @@ public enum TemperatureAffichee {
     TemperatureAffichee(double valeurLimite) {
         this.valeurLimite = valeurLimite;
     }
+    /**Renvoie la valeur limite pour gérer les biomes*/
 
     public double getValeurLimite() {
         return valeurLimite;

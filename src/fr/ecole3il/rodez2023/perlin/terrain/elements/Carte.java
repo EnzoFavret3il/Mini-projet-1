@@ -39,7 +39,7 @@ public class Carte {
                 double altitude = scanner.nextDouble();
                 double hydrometrie = scanner.nextDouble();
                 double temperature = scanner.nextDouble();
-                this.terrains[j][i] = new Terrain(altitude, hydrometrie, temperature);
+                terrains[j][i] = new Terrain(altitude, hydrometrie, temperature);
                 scanner.nextLine(); // Passer à la ligne suivante pour finir la lecture
             }
         }

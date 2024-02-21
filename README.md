@@ -7,6 +7,8 @@ La partie Bruit de Perlin (image rouge à forme aléatoire à générer) fonctio
 Concernant la partie de génération de terrain, tout a été réalisé, j'ai dû modifier certaines classes (VisualiseurTerrain et autre) en ajoutant des throws exception ou try and catch à cause de ma classe TerrainInnexistant (je ne comprend pas pourquoi mais dans VisualiseurCarteTerrain j'avais certaines partie de code en erreur sans cela). La génération de carte avec terrain de manière Aléatoire fonctionne mais celle avec le bruitdeperlin ne fonctionne pas.. 
 J'ai dû mettre en commentaire une partie du code dans VisualiseurCarteTerrain qui affichait sans cesse les valeurs du terrain de la souris. Par ailleurs, le clique sur les tuils fonctionnes mais a un problème de résolution qui fait que certain biomes n'ont pas les bonnes valeurs. Je n'ai pas sû le résoudre
 
+Au sujet des Tests Unitaires, je n'ai pas su en mettre en place dans ce sujet.
+
 Le projet compile sans soucis. 
 
 ## Réponse aux Questions

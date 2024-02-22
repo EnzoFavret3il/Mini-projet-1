@@ -1,13 +1,17 @@
 # Ce que j'ai réalisé du projet
 
-J'ai pû répondre à toute les questions non bonus du sujet avec plus ou moins de difficulté.
+J'ai pû répondre à toute les questions non bonus du sujet avec plus ou moins de difficulté. La classe super bruit perlin a été faite aussi. 
 
+### BruitDePerlin
 La partie Bruit de Perlin (image rouge à forme aléatoire à générer) fonctionne bien à part lorsque l'on rappuie à plusieurs reprises sur générer avec une même graine, il arrive qu'il y ait une erreur OutofBoundException mais je n'ai pas sû résoudre ce problème.
 
-Concernant la partie de génération de terrain, tout a été réalisé, j'ai dû modifier certaines classes (VisualiseurTerrain et autre) en ajoutant des throws exception ou try and catch à cause de ma classe TerrainInnexistant (je ne comprend pas pourquoi mais dans VisualiseurCarteTerrain j'avais certaines partie de code en erreur sans cela). La génération de carte avec terrain de manière Aléatoire fonctionne mais celle avec le bruitdeperlin ne fonctionne pas.. 
-J'ai dû mettre en commentaire une partie du code dans VisualiseurCarteTerrain qui affichait sans cesse les valeurs du terrain de la souris. Par ailleurs, le clique sur les tuils fonctionnes mais a un problème de résolution qui fait que certain biomes n'ont pas les bonnes valeurs. Je n'ai pas sû le résoudre
+### Carte
+Concernant la partie de génération de terrain, tout a été réalisé, j'ai dû modifier certaines classes (VisualiseurTerrain et autre) en ajoutant des throws exception ou try and catch à cause de ma classe TerrainInnexistant (je ne comprend pas pourquoi mais dans VisualiseurCarteTerrain j'avais certaines partie de code en erreur sans cela). La génération de carte via les deux générateurs fonctionne.. 
+Le clique sur les tuils fonctionnes mais a un problème de résolution qui fait que certain biomes n'ont pas les bonnes valeurs. Je n'ai pas sû le résoudre. Aussi l'importation d'une carte ne fonctionne pas non plus mais la sauvegarde elle fonctionne.
 
-Au sujet des Tests Unitaires, je n'ai pas su en mettre en place dans ce sujet.
+### Tests Unitaires
+Au sujet des Tests Unitaires, deux classes tests générateuraléatoire ainsi que typeterrains.
+
 
 Le projet compile sans soucis. 
 

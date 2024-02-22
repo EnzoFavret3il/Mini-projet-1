@@ -1,5 +1,5 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
-
+/**@author EnzoFAVRET*/
 import java.util.Scanner;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
 import fr.ecole3il.rodez2023.perlin.terrain.generation.GenerateurCarte;

@@ -1,7 +1,7 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.TypeTerrain;
 import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
-
+/**@author EnzoFAVRET*/
 /**@param hydrometrie,temperature,altitude --> données définissant un terrain de type double pour plus de précision*/
 public class Terrain {
     private double hydrometrie;

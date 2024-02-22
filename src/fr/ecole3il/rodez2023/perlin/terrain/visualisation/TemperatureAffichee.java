@@ -1,5 +1,6 @@
 package fr.ecole3il.rodez2023.perlin.terrain.visualisation;
 /**@Enum --> Différents types de temperature*/
+/**@author EnzoFAVRET*/
 public enum TemperatureAffichee {
 	FROID(0.0),
     TEMPERE(10.0),

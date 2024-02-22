@@ -1,6 +1,7 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 import org.junit.Test;
 import java.awt.image.BufferedImage;
+/**@author EnzoFAVRET*/
 /**@enum Enumeration de types de terrain avec le nom et le fichier png */
 public enum TypeTerrain {
     COLLINES("Collines", "hills.png"),

@@ -1,5 +1,5 @@
 package fr.ecole3il.rodez2023.perlin.terrain.visualisation;
-
+/**@author EnzoFAVRET*/
 /**@Enum --> Différents types d'hydrometrie*/
 public enum HydrometrieAffichee {
 	SEC(0.33),

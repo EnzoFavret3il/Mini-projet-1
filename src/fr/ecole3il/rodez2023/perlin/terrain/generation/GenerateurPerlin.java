@@ -3,7 +3,7 @@ package fr.ecole3il.rodez2023.perlin.terrain.generation;
 
 import fr.ecole3il.rodez2023.perlin.math.BruitPerlin2D;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
-
+/**@author EnzoFAVRET*/
 public class GenerateurPerlin extends GenerateurCarte{
 
 	public GenerateurPerlin(long graine) {

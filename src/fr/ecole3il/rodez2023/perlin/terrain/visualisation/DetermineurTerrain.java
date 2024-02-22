@@ -1,5 +1,5 @@
 package fr.ecole3il.rodez2023.perlin.terrain.visualisation;
-
+/**@author EnzoFAVRET*/
 import fr.ecole3il.rodez2023.perlin.terrain.elements.TypeTerrain;
 //Interface pour le DetermineurTerrain
 public interface DetermineurTerrain {

@@ -1,5 +1,5 @@
 package fr.ecole3il.rodez2023.perlin.terrain.generation;
-
+/**@author EnzoFAVRET*/
 import java.util.Random;
 
 import fr.ecole3il.rodez2023.perlin.terrain.elements.MauvaiseValeurException;

@@ -1,5 +1,5 @@
 package fr.ecole3il.rodez2023.perlin.math;
-
+/**@author EnzoFAVRET*/
 public class SuperBruitPerlin2D extends BruitPerlin2D {
 
 	//TODO ? no, héritage de la classe bruitperlin2D

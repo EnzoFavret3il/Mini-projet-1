@@ -7,6 +7,7 @@ import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
  * pour générer un tableau de terrains en fonction d'une graine.
  * @author proussille
  */
+
 public abstract class GenerateurCarte {
 
     private final long graine;

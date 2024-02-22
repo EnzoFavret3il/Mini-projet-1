@@ -1,5 +1,6 @@
 package fr.ecole3il.rodez2023.perlin.terrain.visualisation;
 /**@Enum différente types d'altitudes*/
+/**@author EnzoFAVRET*/
 public enum AltitudeAffichee {
 	BASSE(0.33),
     MOYENNE(0.66),

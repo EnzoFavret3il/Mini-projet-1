@@ -5,9 +5,15 @@ import fr.ecole3il.rodez2023.perlin.math.BruitPerlin2D;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
 /**@author EnzoFAVRET*/
 public class GenerateurPerlin extends GenerateurCarte{
-
+	private BruitPerlin2D altitudePerlin;
+	private BruitPerlin2D hydrometriePerlin;
+	private BruitPerlin2D temperaturePerlin;
 	public GenerateurPerlin(long graine) {
 		super(graine);
+		 /** @BruitPerlin2D --> génération des valeurs avec des graines*/
+		 altitudePerlin = new BruitPerlin2D(getGraine()*4, 1); 
+         hydrometriePerlin = new BruitPerlin2D(getGraine(), 1); 
+         temperaturePerlin = new BruitPerlin2D(getGraine() * 2, 1);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -17,11 +23,7 @@ public class GenerateurPerlin extends GenerateurCarte{
 		 * 
 		 * Vous êtes parti très très très loin dans la réalisation de cette classe
 		 * J'ai failli faire un coma
-		 * 
-		 * @BruitPerlin2D --> génération des valeurs avec des graines*/
-		BruitPerlin2D altitudePerlin = new BruitPerlin2D(getGraine(), 1); 
-        BruitPerlin2D hydrometriePerlin = new BruitPerlin2D(getGraine(), 1); 
-        BruitPerlin2D temperaturePerlin = new BruitPerlin2D(getGraine() * 2, 1);
+		 */
         /**@double x/y --> création des coordonnées*/
         double x = (double) i / (double) largeur;
         double y = (double) j / (double) hauteur;

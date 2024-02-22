@@ -84,6 +84,9 @@ public class BruitPerlin2D extends Bruit2D {
 		tmp = y - y0;
 		Cy = 3 * tmp * tmp - 2 * tmp * tmp * tmp;
 		//Modification here Li1 au lieu de Li2
-		return Li1 + Cy * (Li2 - Li1);
+		return (Li1 + Cy * (Li2 - Li1))* unit;
 	}
+	private double produitScalaire(float[] gradient, double x, double y) {
+        return gradient[0] * x + gradient[1] * y;
+    }
 }

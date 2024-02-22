@@ -36,9 +36,9 @@ public class Carte {
         //troisième ligne
         for (int i = 0; i < hauteur; i++) {
             for (int j = 0; j < largeur; j++) {
-                double altitude = scanner.nextDouble();
-                double hydrometrie = scanner.nextDouble();
-                double temperature = scanner.nextDouble();
+                double altitude = Double.parseDouble(scanner.next());
+                double hydrometrie = Double.parseDouble(scanner.next());
+                double temperature = Double.parseDouble(scanner.next());
                 terrains[j][i] = new Terrain(altitude, hydrometrie, temperature);
                 scanner.nextLine(); // Passer à la ligne suivante pour finir la lecture
             }

@@ -5,11 +5,15 @@ import org.junit.Test;
 
 public class TypeTerrainTest {
 
-    @Test
-    public void testEnumValues() {
+	@Test
+	//Méthode de test pour vérifier si les terrains ont une image
+    public void testTerrainImageExiste() {
         TypeTerrain[] terrains = TypeTerrain.values();
-        assertEquals(9, terrains.length); // Vérifiez le nombre de terrains
+        for (TypeTerrain terrain : terrains) {
+            assertNotNull(terrain.getImage()); 
+        }
     }
+
 
     
 }

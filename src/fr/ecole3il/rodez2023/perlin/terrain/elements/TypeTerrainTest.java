@@ -1,3 +1,5 @@
+package fr.ecole3il.rodez2023.perlin.terrain.elements;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import java.awt.image.BufferedImage;
@@ -13,7 +15,15 @@ public class TypeTerrainTest {
             assertNotNull(terrain.getImage()); 
         }
     }
-
+	@Test
+	// Vérifie que le nom des terrains n'est pas nul
+    public void testTerrainNames() {
+        TypeTerrain[] terrains = TypeTerrain.values();
+        for (TypeTerrain terrain : terrains) {
+            assertNotNull(terrain.getNom()); 
+        }
+    }
+	
 
     
 }

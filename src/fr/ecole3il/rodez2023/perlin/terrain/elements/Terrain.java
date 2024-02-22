@@ -9,10 +9,11 @@ public class Terrain {
     private double altitude;
 /**@Constructeur --> constructeur pour le terrain
  * Gestion des valeurs par setters pour gérer erreurs mauvaise valeur*/
-    public Terrain(double hydrometrie, double temperature, double altitude) {
+    public Terrain(double altitude,double hydrometrie, double temperature ) {
+    	setAltitude(altitude);
         setHydrometrie(hydrometrie);
         setTemperature(temperature);
-        setAltitude(altitude);
+        
     }
     /**@getters --> getter pour les valeurs du terrain*/
     public double getHydrometrie() {

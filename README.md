@@ -7,7 +7,7 @@ La partie Bruit de Perlin (image rouge à forme aléatoire à générer) fonctio
 
 ### Carte
 Concernant la partie de génération de terrain, tout a été réalisé, j'ai dû modifier certaines classes (VisualiseurTerrain et autre) en ajoutant des throws exception ou try and catch à cause de ma classe TerrainInnexistant (je ne comprend pas pourquoi mais dans VisualiseurCarteTerrain j'avais certaines partie de code en erreur sans cela). La génération de carte via les deux générateurs fonctionne.. 
-Le clique sur les tuils fonctionnes mais a un problème de résolution qui fait que certain biomes n'ont pas les bonnes valeurs. Je n'ai pas sû le résoudre. Aussi l'importation d'une carte ne fonctionne pas non plus mais la sauvegarde elle fonctionne.
+Le clique sur les tuils fonctionnes mais un problème de résolution fait que certain biomes n'ont pas les bonnes valeurs. Je n'ai pas sû le résoudre. Aussi l'importation d'une carte ne fonctionne pas non plus mais la sauvegarde elle fonctionne.
 
 ### Tests Unitaires
 Au sujet des Tests Unitaires, deux classes tests générateuraléatoire ainsi que typeterrains.

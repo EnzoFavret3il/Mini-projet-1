@@ -29,8 +29,7 @@ public class GenerateurPerlin extends GenerateurCarte{
         double altitude = altitudePerlin.bruit2D(x, y);
         double hydrometrie = hydrometriePerlin.bruit2D(x, y);
         double temperature = temperaturePerlin.bruit2D(x, y);
-        hydrometrie = (hydrometrie + 1) / 2; 
-        temperature = (temperature + 1) / 2 ; 
+
         /**@return --> création d'un nouveau terrain*/
         return new Terrain(altitude, hydrometrie, temperature);
 	}

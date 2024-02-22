@@ -17,10 +17,10 @@ public class GenerateurAleatoire extends GenerateurCarte{
 	@Override
 	protected Terrain genererTerrain(int i, int j, int largeur, int hauteur) {
 		/**@info la pif-au-métrie est dans la place*/
-		Random pifomètre = new Random();
-		double altitude= pifomètre.nextDouble();
-		double hydrometrie=pifomètre.nextDouble();
-		double temperature=pifomètre.nextDouble();
+		Random random = new Random();
+		double altitude= random.nextDouble(-1.0,1.0);
+		double hydrometrie=random.nextDouble(0.0, 1.0);
+		double temperature=random.nextDouble(0.0, 1.0);
 		try {
             return new Terrain(altitude, hydrometrie, temperature);
         } catch (MauvaiseValeurException e) {
